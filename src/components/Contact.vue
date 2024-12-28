@@ -1,6 +1,6 @@
 <template>
         <section id="gallery" class="bg-pink-700 p-8">
-        <h1>Contact Here</h1> 
+        <h1>Contact</h1> 
         </section>
       </template>
       
