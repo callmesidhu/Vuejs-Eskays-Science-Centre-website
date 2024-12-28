@@ -3,9 +3,10 @@
     <Navbar />
     <Home />
     <About />
-    <Service />
     <Gallery />
+    <Service />
     <Team />
+    <Contact />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import About from './components/About.vue'
 import Service from './components/Service.vue'
 import Gallery from './components/Gallery.vue'
 import Team from './components/Team.vue'
+import Contact from './components/Contact.vue'
 import './assets/styles/tailwind.css';
 
 export default {
@@ -26,7 +28,8 @@ export default {
     About,
     Service,
     Gallery,
-    Team
+    Team,
+    Contact
   }
 }
 </script>
