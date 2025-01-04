@@ -1,12 +1,6 @@
 <template>
   <div>
     <Navbar />
-    <Home />
-    <About />
-    <Gallery />
-    <Service />
-    <Team />
-    <Contact />
   </div>
 </template>
 
