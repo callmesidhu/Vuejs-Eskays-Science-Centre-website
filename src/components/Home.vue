@@ -5,9 +5,9 @@
   >
     <!-- Background Image -->
     <img 
-      src="/gallery/1.jpg" 
+      src="/gallery/2.jpg" 
       alt="Background Image" 
-      class="absolute inset-0 w-full h-full object-cover z-0" 
+      class="absolute inset-0 w-full h-full object-cover z-0 grayscale" 
     />
 
     <!-- Text Content -->

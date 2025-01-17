@@ -9,8 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
     "swiper": "^11.2.1",
-    "vue": "^3.5.13"
+    "vue": "^3.5.13",
+    "vue-icons": "^2.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",

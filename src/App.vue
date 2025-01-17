@@ -2,7 +2,8 @@
   <div>
     <Navbar />
     <Home />
-    <Gallery/>
+    <Gallery />
+    <Contact />
   </div>
 </template>
 
