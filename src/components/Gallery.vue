@@ -1,4 +1,5 @@
 <template>
+<section id="gallery">
   <swiper
     :spaceBetween="30"
     :centeredSlides="true"
@@ -23,6 +24,7 @@
       <img src="/gallery/3.jpg" alt="Gallery Image 3" class="w-full h-auto object-cover" />
     </swiper-slide>
   </swiper>
+</section>
 </template>
 
 <script>
