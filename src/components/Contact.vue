@@ -12,21 +12,24 @@
 
       <!-- Left Portion -->
       <div class="flex-1 flex flex-col justify-center items-center p-8 relative z-10">
-        <h1 class="text-white text-center text-4xl my-"><u>Contact Us</u></h1>
+        <h1 class=" text-center text-4xl my-8 text-white"><u>Contact Us</u></h1>
         <!-- Phone -->
         <div class="flex items-center space-x-4 mb-4">
+          <a href="tel:+919497372512"
+          target="_blank">
           <font-awesome-icon :icon="['fas', 'phone']" class="text-green-500 w-8 h-8" aria-label="Phone" />
           <span class="text-2xl">+91 949 737 2512</span>
+        </a>
         </div>
         <!-- Email -->
         <div class="flex items-center space-x-4">
-          <font-awesome-icon :icon="['fas', 'envelope']" class="text-blue-500 w-8 h-8" aria-label="Email" />
+          <font-awesome-icon :icon="['fas', 'envelope']" class="text-red-500 w-8 h-8" aria-label="Email" />
           <span class="text-2xl">eskayspuanlur@gmail.com</span>
         </div>
         <!-- Social Links -->
         <div class="flex space-x-4 mt-4">
           <a
-            href="https://wa.me/+917909109636"
+            href="https://wa.me/+919497372512"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
@@ -34,7 +37,7 @@
             <font-awesome-icon :icon="['fab', 'whatsapp']" class="text-green-500 w-8 h-8" />
           </a>
           <a
-            href="https://www.instagram.com/t.pro_bono/"
+            href="https://www.instagram.com/eskays_science_centre"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -42,7 +45,7 @@
             <font-awesome-icon :icon="['fab', 'instagram']" class="text-pink-500 w-8 h-8" />
           </a>
           <a
-            href="https://www.linkedin.com/company/t-pro-bono/"
+            href="https://www.linkedin.com/company/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -59,8 +62,7 @@
         </h2>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4232.963913347412!2d76.9295891!3d9.0176387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0677aa25b93581%3A0x813816ce9ebc523c!2sEskay&#39;s%20Science%20Centre!5e1!3m2!1sen!2sin!4v1737109640047!5m2!1sen!2sin"
-          width="600"
-          height="450"
+          class="lg:w-[600px] w-96 h-64 lg:h-[450px]"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
@@ -68,7 +70,7 @@
         ></iframe>
       </div>
     </div>
-    <p class="text-white text-center">copyright Eskays Science Centre</p>
+    <p class="text-white text-center m-5">&copy; Eskays Science Centre</p>
     <hr class="h-2 my-5" />
   </div>
 </template>
