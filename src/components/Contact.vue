@@ -6,7 +6,7 @@
       style="background-image: url('/gallery/2.jpg');"
     >
       <!-- Background Overlay -->
-      <div class="absolute inset-0  backdrop-blur-md z-0">
+      <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md z-0">
         
       </div>
 

@@ -6,6 +6,7 @@
     <Gallery />
     <Team />
     <service />
+    <Events />
     <Contact />
   </div>
 </template>
@@ -19,6 +20,7 @@ import Gallery from './components/Gallery.vue'
 import Team from './components/Team.vue'
 import Contact from './components/Contact.vue'
 import './assets/styles/tailwind.css';
+import Events from './components/Events.vue'
 
 export default {
   name: 'App',
@@ -29,7 +31,8 @@ export default {
     Service,
     Gallery,
     Team,
-    Contact
+    Contact,
+    Events
   }
 }
 </script>

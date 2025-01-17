@@ -1,13 +1,13 @@
 <template>
   <section
     id="home"
-    class="relative bg-green-500 text-white h-screen flex items-center justify-center overflow-hidden"
+    class="relative text-white h-screen flex items-center justify-center overflow-hidden"
   >
     <!-- Background Image -->
     <img 
       src="/gallery/2.jpg" 
       alt="Background Image" 
-      class="absolute inset-0 w-full h-full object-cover z-0 grayscale backdrop-blur-md" 
+      class="absolute inset-0 w-full h-full object-cover z-0 opacity-50 backdrop-blur-md" 
     />
 
     <!-- Text Content -->
