@@ -22,6 +22,7 @@ import Contact from './components/Contact.vue'
 import './assets/styles/tailwind.css';
 import Events from './components/Events.vue'
 
+
 export default {
   name: 'App',
   components: {

@@ -4,3 +4,29 @@
 html {
   scroll-behavior: smooth;
 }
+/* Apply to the entire document or a specific element */
+body {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: darkred #000000; /* Dark red thumb on a dark track */
+}
+
+/* For WebKit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+  height: 25px; /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Dark background for the track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(159, 1, 1); /* Dark red color for the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  border: 2px solid #000000; /* Adds a border matching the track for a clean look */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ac1616; /* Slightly lighter dark red when hovered */
+}
