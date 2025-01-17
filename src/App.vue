@@ -2,6 +2,7 @@
   <div>
     <Navbar />
     <Home />
+    <About />
     <Gallery />
     <Contact />
   </div>

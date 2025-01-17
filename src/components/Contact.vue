@@ -12,7 +12,7 @@
 
       <!-- Left Portion -->
       <div class="flex-1 flex flex-col justify-center items-center p-8 relative z-10">
-        <h1 class="text-white text-center text-4xl my-4"><u>Contact Us</u></h1>
+        <h1 class="text-white text-center text-4xl my-"><u>Contact Us</u></h1>
         <!-- Phone -->
         <div class="flex items-center space-x-4 mb-4">
           <font-awesome-icon :icon="['fas', 'phone']" class="text-green-500 w-8 h-8" aria-label="Phone" />

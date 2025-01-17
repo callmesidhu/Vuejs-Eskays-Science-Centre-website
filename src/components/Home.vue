@@ -7,7 +7,7 @@
     <img 
       src="/gallery/2.jpg" 
       alt="Background Image" 
-      class="absolute inset-0 w-full h-full object-cover z-0 grayscale" 
+      class="absolute inset-0 w-full h-full object-cover z-0 grayscale backdrop-blur-md" 
     />
 
     <!-- Text Content -->
