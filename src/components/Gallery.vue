@@ -1,21 +1,51 @@
 <template>
-        <section id="gallery" class="bg-gray-300 p-8">
-          <h2 class="text-3xl font-bold text-center">Gallery</h2>
-          <div class="mt-4 grid grid-cols-3 gap-4">
-            <div class="bg-orange-500 h-32"></div>
-            <div class="bg-gray-500 h-32"></div>
-            <div class="bg-gray-500 h-32"></div>
-          </div>
-        </section>
-      </template>
-      
-      <script>
-      export default {
-        name: 'Gallery'
-      }
-      </script>
-      
-      <style scoped>
-      /* Additional styles for Gallery */
-      </style>
-      
+  <swiper
+    :spaceBetween="30"
+    :centeredSlides="true"
+    :autoplay="{
+      delay: 1500,
+      disableOnInteraction: false,
+    }"
+    :pagination="{
+      clickable: true,
+    }"
+    :navigation="true"
+    :modules="modules"
+    class="mySwiper"
+  >
+    <swiper-slide>
+      <img src="/gallery/1.jpg" alt="Gallery Image 1" class="w-full h-auto object-cover" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="/gallery/2.jpg" alt="Gallery Image 2" class="w-full h-auto object-cover" />
+    </swiper-slide>
+    <swiper-slide>
+      <img src="/gallery/3.jpg" alt="Gallery Image 3" class="w-full h-auto object-cover" />
+    </swiper-slide>
+  </swiper>
+</template>
+
+<script>
+  // Import Swiper Vue.js components
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+
+  // Import Swiper styles
+  import 'swiper/css';
+  import 'swiper/css/pagination';
+  import 'swiper/css/navigation';
+
+  // Import required modules
+  import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+  export default {
+    components: {
+      Swiper,
+      SwiperSlide,
+    },
+    setup() {
+      return {
+        modules: [Autoplay, Pagination, Navigation],
+      };
+    },
+  };
+</script>
