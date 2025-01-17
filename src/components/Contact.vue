@@ -62,13 +62,13 @@
       </div>
 
       <!-- Right Portion -->
-      <div class="flex-1 p-8 relative z-10">
+      <div class="flex-1 p-8 relative z-10 items-center justify-center">
         <h2 class="text-3xl font-bold mb-4">
           <u>Location</u>
         </h2>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4232.963913347412!2d76.9295891!3d9.0176387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0677aa25b93581%3A0x813816ce9ebc523c!2sEskay&#39;s%20Science%20Centre!5e1!3m2!1sen!2sin!4v1737109640047!5m2!1sen!2sin"
-          class="lg:w-[600px] w-96 h-64 lg:h-[450px]"
+          class="lg:w-[600px] w-80 h-64 lg:h-[450px]"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
