@@ -99,21 +99,27 @@ export default {
       isMobileMenuOpen.value = false;
     };
 
-    // Hide navbar after 1 seconds
+    // Hide navbar after 1 second
     onMounted(() => {
       setTimeout(() => {
-        isVisible.value = false;
+        if (!isMobileMenuOpen.value) {
+          isVisible.value = false;
+        }
       }, 1000);
     });
 
-    // Show navbar when mouse moves or scrolling
+    // Show navbar when mouse moves or scrolling, but not if menu is open
     const showNavbar = () => {
-      isVisible.value = true;
-      // Reset timer to hide navbar again after 1 seconds of inactivity
-      clearTimeout(hideTimeout);
-      hideTimeout = setTimeout(() => {
-        isVisible.value = false;
-      }, 1000);
+      if (!isMobileMenuOpen.value) {
+        isVisible.value = true;
+        // Reset timer to hide navbar again after 1 second of inactivity
+        clearTimeout(hideTimeout);
+        hideTimeout = setTimeout(() => {
+          if (!isMobileMenuOpen.value) {
+            isVisible.value = false;
+          }
+        }, 1000);
+      }
     };
 
     let hideTimeout;
