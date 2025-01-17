@@ -4,6 +4,8 @@
     <Home />
     <About />
     <Gallery />
+    <Team />
+    <service />
     <Contact />
   </div>
 </template>

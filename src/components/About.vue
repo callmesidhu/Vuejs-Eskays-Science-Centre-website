@@ -30,6 +30,25 @@
         “Together We Strive For Success”
       </p>
     </div>
+    <hr class="h-2 w-full my-8 mx-3">
+    <div class="z-10 text-center text-white flex lg:flex-row flex-col">
+       <div>
+        <h2 class="text-4xl font-bold my-6 text-red-600">Our Mission</h2>
+        <p class="text-xl max-w-3xl mx-auto mb-12">
+          The mission of Eskay’s is to establish a comfortable and conducive learning environment
+          where students have opportunities to experience success in order to compete in a global society.
+        </p>
+       </div> 
+        <hr class="h-2 lg:w-72 lg:rotate-90 lg:my-32">
+        <div>
+          <h2 class="text-4xl font-bold my-6 text-red-600">Our Vision</h2>
+        <p class="text-xl max-w-3xl mx-auto">
+          Eskay’s promotes change by providing an environment for self-motivated, reliable, and productive students
+          who will impact the local community and global society.
+        </p>
+        </div>
+      </div>
+      <hr class="h-2 w-full my-8 mx-3">
   </section>
 </template>
 

@@ -22,13 +22,10 @@
           <a href="#gallery" class="text-2xl hover:text-red-500">GALLERY</a>
         </li>
         <li>
-          <a href="#faculty" class="text-2xl hover:text-red-500">OUR FACULTIES</a>
+          <a href="#faculty" class="text-2xl hover:text-red-500">FACULTIES</a>
         </li>
         <li>
-          <a href="#service" class="text-2xl hover:text-red-500">SERVICES</a>
-        </li>
-        <li>
-          <a href="#courses" class="text-2xl hover:text-red-500">COURSES</a>
+          <a href="#service" class="text-2xl hover:text-red-500">FACILITIES</a>
         </li>
         <li>
           <a href="#contact" class="text-2xl hover:text-red-500">CONTACT US</a>
@@ -94,13 +91,10 @@
         <a href="#gallery" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Gallery</a>
       </li>
       <li>
-        <a href="#faculty" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Our Faculties</a>
+        <a href="#faculty" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Faculties</a>
       </li>
       <li>
-        <a href="#service" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Services</a>
-      </li>
-      <li>
-        <a href="#courses" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Courses</a>
+        <a href="#service" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Facilities</a>
       </li>
       <li>
         <a href="#contact" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Contact Us</a>
