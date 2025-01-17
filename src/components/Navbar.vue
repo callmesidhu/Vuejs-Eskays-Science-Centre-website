@@ -103,7 +103,7 @@ export default {
     onMounted(() => {
       setTimeout(() => {
         if (!isMobileMenuOpen.value) {
-          isVisible.value = false;
+          isVisible.value = true;
         }
       }, 1000);
     });
@@ -116,7 +116,7 @@ export default {
         clearTimeout(hideTimeout);
         hideTimeout = setTimeout(() => {
           if (!isMobileMenuOpen.value) {
-            isVisible.value = false;
+            isVisible.value = true;
           }
         }, 1000);
       }
