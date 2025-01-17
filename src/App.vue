@@ -1,14 +1,14 @@
 <template>
-  <div>
-    <Navbar />
+  <Navbar />
+  <section>
     <Home />
-    <About />
+    <About  />
     <Gallery />
     <Team />
     <service />
     <Events />
     <Contact />
-  </div>
+  </section>
 </template>
 
 <script>

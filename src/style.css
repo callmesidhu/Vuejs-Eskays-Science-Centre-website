@@ -12,6 +12,14 @@ body {
   scrollbar-width: thin; /* For Firefox */
   scrollbar-color: darkred #000000; /* Dark red thumb on a dark track */
 }
+section:before {
+  content: "";
+  display: block;
+  height: 80px; /* Adjust based on your navbar height */
+  margin-top: -80px;
+  visibility: hidden;
+}
+
 
 /* For WebKit browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
