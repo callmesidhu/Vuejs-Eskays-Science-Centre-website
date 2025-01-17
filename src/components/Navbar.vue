@@ -1,22 +1,139 @@
 <template>
-        <nav class="bg-blue-600 p-4 text-white">
-          <ul class="flex space-x-4">
-            <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
-            <li><a href="#about" class="hover:text-yellow-400">About</a></li>
-            <li><a href="#services" class="hover:text-yellow-400">Services</a></li>
-            <li><a href="#gallery" class="hover:text-yellow-400">Gallery</a></li>
-            <li><a href="#team" class="hover:text-yellow-400">Team</a></li>
-          </ul>
-        </nav>
-      </template>
-      
-      <script>
-      export default {
-        name: 'Navbar'
-      }
-      </script>
-      
-      <style scoped>
-      /* Additional styles for Navbar */
-      </style>
-      
+  <nav class="text-white p-3 px-4">
+    <div class="flex justify-between items-center max-w-7xl mx-3">
+      <!-- Logo Section -->
+      <div class="text-2xl font-bold">
+        <img 
+          src="/public/favicon.ico" 
+          alt="TProBono Logo" 
+          class="h-16 w-16"
+        />
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="hidden md:flex space-x-8">
+        <li>
+          <a href="#home" class="text-2xl hover:text-gray-300">HOME</a>
+        </li>
+        <li>
+          <a href="#about" class="text-2xl hover:text-gray-300">ABOUT</a>
+        </li>
+        <li>
+          <a href="#gallery" class="text-2xl hover:text-gray-300">GALLERY</a>
+        </li>
+        <li>
+          <a href="#faculty" class="text-2xl hover:text-gray-300">OUR FACULTIES</a>
+        </li>
+        <li>
+          <a href="#service" class="text-2xl hover:text-gray-300">SERVICES</a>
+        </li>
+        <li>
+          <a href="#courses" class="text-2xl hover:text-gray-300">COURSES</a>
+        </li>
+        <li>
+          <a href="#contact" class="text-2xl hover:text-gray-300">CONTACT US</a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button
+        class="block md:hidden text-white focus:outline-none"
+        @click="toggleMenu"
+      >
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <ul
+      class="z-50 justify-center items-center flex-col space-y-6 md:hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-lg"
+      :class="{ flex: isMobileMenuOpen, hidden: !isMobileMenuOpen }"
+    >
+      <!-- Close Button -->
+      <button
+        class="absolute top-6 right-6 text-white"
+        @click="closeMenu"
+      >
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <!-- Menu Items -->
+      <li>
+        <a href="#home" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Home</a>
+      </li>
+      <li>
+        <a href="#about" class="text-2xl text-white hover:text-red-500" @click="closeMenu">About</a>
+      </li>
+      <li>
+        <a href="#gallery" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Gallery</a>
+      </li>
+      <li>
+        <a href="#faculty" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Our Faculties</a>
+      </li>
+      <li>
+        <a href="#service" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Services</a>
+      </li>
+      <li>
+        <a href="#courses" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Courses</a>
+      </li>
+      <li>
+        <a href="#contact" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+</template>
+
+<script>
+import { ref } from 'vue';
+
+export default {
+  name: 'Navbar',
+  setup() {
+    const isMobileMenuOpen = ref(false);
+
+    const toggleMenu = () => {
+      isMobileMenuOpen.value = !isMobileMenuOpen.value;
+    };
+
+    const closeMenu = () => {
+      isMobileMenuOpen.value = false;
+    };
+
+    return {
+      isMobileMenuOpen,
+      toggleMenu,
+      closeMenu,
+    };
+  },
+};
+</script>
+
+<style scoped>
+/* Add any custom styles here */
+</style>
