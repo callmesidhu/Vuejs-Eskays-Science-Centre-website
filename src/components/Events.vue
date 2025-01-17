@@ -1,5 +1,5 @@
 <template>
-        <div class="p-5 text-center text-white bg-black py-auto">
+        <div id="events" class="p-5 text-center text-white bg-black py-auto">
           <h1 class="text-3xl font-bold mb-5 text-red-600">Upcoming Events</h1>
           <table class="table-auto w-3/4 mx-auto border mb-12">
             <thead>

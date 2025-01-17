@@ -13,22 +13,25 @@
       <!-- Navigation Links -->
       <ul class="hidden md:flex space-x-8">
         <li>
-          <a href="#home" class="text-2xl hover:text-red-500">HOME</a>
+          <a href="#home" class="text-2xl hover:text-red-500">Home</a>
         </li>
         <li>
-          <a href="#about" class="text-2xl hover:text-red-500">ABOUT</a>
+          <a href="#about" class="text-2xl hover:text-red-500">About</a>
         </li>
         <li>
-          <a href="#gallery" class="text-2xl hover:text-red-500">GALLERY</a>
+          <a href="#gallery" class="text-2xl hover:text-red-500">Gallery</a>
         </li>
         <li>
-          <a href="#faculty" class="text-2xl hover:text-red-500">FACULTIES</a>
+          <a href="#faculty" class="text-2xl hover:text-red-500">Facilities</a>
         </li>
         <li>
-          <a href="#service" class="text-2xl hover:text-red-500">FACILITIES</a>
+          <a href="#service" class="text-2xl hover:text-red-500">Facilities</a>
         </li>
         <li>
-          <a href="#contact" class="text-2xl hover:text-red-500">CONTACT US</a>
+          <a href="#events" class="text-2xl hover:text-red-500">Events</a>
+        </li>
+        <li>
+          <a href="#contact" class="text-2xl hover:text-red-500">Contact</a>
         </li>
       </ul>
 
@@ -97,7 +100,10 @@
         <a href="#service" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Facilities</a>
       </li>
       <li>
-        <a href="#contact" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Contact Us</a>
+        <a href="#events" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Events</a>
+      </li>
+      <li>
+        <a href="#contact" class="text-2xl text-white hover:text-red-500" @click="closeMenu">Contact</a>
       </li>
     </ul>
   </nav>
