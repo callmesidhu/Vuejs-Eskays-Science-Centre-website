@@ -1,11 +1,11 @@
 <template>
-  <nav class="text-white p-3 px-4">
-    <div class="flex justify-between items-center max-w-7xl mx-3">
+  <nav class="text-white p-3 px-4 fixed top-0 left-0 w-full bg-black z-50">
+    <div class="flex justify-between items-center max-w-7xl mx-auto">
       <!-- Logo Section -->
       <div class="text-2xl font-bold">
         <img 
           src="/public/favicon.ico" 
-          alt="TProBono Logo" 
+          alt="Logo" 
           class="h-16 w-16"
         />
       </div>
@@ -13,25 +13,25 @@
       <!-- Navigation Links -->
       <ul class="hidden md:flex space-x-8">
         <li>
-          <a href="#home" class="text-2xl hover:text-gray-300">HOME</a>
+          <a href="#home" class="text-2xl hover:text-red-500">HOME</a>
         </li>
         <li>
-          <a href="#about" class="text-2xl hover:text-gray-300">ABOUT</a>
+          <a href="#about" class="text-2xl hover:text-red-500">ABOUT</a>
         </li>
         <li>
-          <a href="#gallery" class="text-2xl hover:text-gray-300">GALLERY</a>
+          <a href="#gallery" class="text-2xl hover:text-red-500">GALLERY</a>
         </li>
         <li>
-          <a href="#faculty" class="text-2xl hover:text-gray-300">OUR FACULTIES</a>
+          <a href="#faculty" class="text-2xl hover:text-red-500">OUR FACULTIES</a>
         </li>
         <li>
-          <a href="#service" class="text-2xl hover:text-gray-300">SERVICES</a>
+          <a href="#service" class="text-2xl hover:text-red-500">SERVICES</a>
         </li>
         <li>
-          <a href="#courses" class="text-2xl hover:text-gray-300">COURSES</a>
+          <a href="#courses" class="text-2xl hover:text-red-500">COURSES</a>
         </li>
         <li>
-          <a href="#contact" class="text-2xl hover:text-gray-300">CONTACT US</a>
+          <a href="#contact" class="text-2xl hover:text-red-500">CONTACT US</a>
         </li>
       </ul>
 
@@ -135,5 +135,5 @@ export default {
 </script>
 
 <style scoped>
-/* Add any custom styles here */
+/* Optional: Custom styles */
 </style>
