@@ -1,6 +1,6 @@
 <template>
   <section id="faculty" class="text-white  p-8">
-    <h2 class="text-4xl font-bold text-center text-red-600"><b>Our Faculty</b></h2>
+    <h2 class="text-4xl font-bold text-center text-red-600 "><b>Our Faculty</b></h2>
     <div class="flex flex-col lg:flex-row mt-8">
       <!-- Left Side: Director's Image and Qualification -->
       <div class="flex-1 flex flex-col items-center mb-8 lg:mb-0">

@@ -12,9 +12,9 @@
 
     <!-- Text Content -->
     <div class="relative z-10 text-center p-6 rounded-md">
-      <h1 class="text-9xl text-red-600 font-bold mb-4">Eskay's Science Centre</h1>
+      <h1 class="lg:text-9xl text-4xl text-red-600 font-bold mb-4 playfair-display">Eskay's Science Centre</h1>
       <hr class="mx-10 w-full h-4">
-      <p class="text-5xl text-red-600 font-bold">An Entrance Based Training Centre at Punalur</p>
+      <p class="lg:text-5xl text-2xl text-red-600 font-bold playfair-display">An Entrance Based Training Centre at Punalur</p>
     </div>
   </section>
 </template>

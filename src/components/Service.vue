@@ -12,7 +12,7 @@
       <div class="z-10 space-y-8">
         <!-- Science Lab Section -->
         <section class="text-center">
-          <h2 class="text-4xl font-bold mb-4 text-red-600">Science Lab</h2>
+          <h2 class="text-5xl font-bold mb-4 text-red-600">Science Lab</h2>
           <p class="text-lg max-w-4xl mx-auto">
             A science lab is a workplace for the conduct of scientific research. It helps students to remember
             the concepts better and to transfer the experience to real-life situations. Eskay’s has the

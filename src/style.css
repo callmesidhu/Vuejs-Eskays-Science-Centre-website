@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Audiowide&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 :root {
   background-color: #111111;
 }
@@ -29,4 +32,39 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #ac1616; /* Slightly lighter dark red when hovered */
+}
+
+.arvo-regular {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arvo-bold {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.arvo-regular-italic {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.arvo-bold-italic {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.audiowide-regular {
+  font-family: "Audiowide", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }

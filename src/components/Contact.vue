@@ -6,20 +6,17 @@
       style="background-image: url('/gallery/2.jpg');"
     >
       <!-- Background Overlay -->
-      <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md z-0">
-        
-      </div>
+      <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md z-0"></div>
 
       <!-- Left Portion -->
       <div class="flex-1 flex flex-col justify-center items-center p-8 relative z-10">
-        <h1 class=" text-center text-4xl my-8 text-white"><u>Contact Us</u></h1>
+        <h1 class="text-center text-4xl my-8 text-white"><u>Contact Us</u></h1>
         <!-- Phone -->
         <div class="flex items-center space-x-4 mb-4">
-          <a href="tel:+919497372512"
-          target="_blank">
-          <font-awesome-icon :icon="['fas', 'phone']" class="text-green-500 w-8 h-8" aria-label="Phone" />
-          <span class="text-2xl">+91 949 737 2512</span>
-        </a>
+          <a href="tel:+919497372512" target="_blank">
+            <font-awesome-icon :icon="['fas', 'phone']" class="text-green-500 w-8 h-8" aria-label="Phone" />
+            <span class="text-2xl">+91 949 737 2512</span>
+          </a>
         </div>
         <!-- Email -->
         <div class="flex items-center space-x-4">
@@ -45,6 +42,14 @@
             <font-awesome-icon :icon="['fab', 'instagram']" class="text-pink-500 w-8 h-8" />
           </a>
           <a
+            href="https://www.youtube.com/channel/your-channel-id"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <font-awesome-icon :icon="['fab', 'youtube']" class="text-red-600 w-8 h-8" />
+          </a>
+          <a
             href="https://www.linkedin.com/company/"
             target="_blank"
             rel="noopener noreferrer"
@@ -52,6 +57,7 @@
           >
             <font-awesome-icon :icon="['fab', 'linkedin']" class="text-blue-500 w-8 h-8" />
           </a>
+          
         </div>
       </div>
 
@@ -71,7 +77,7 @@
       </div>
     </div>
     <p class="text-white text-center m-5">&copy; Eskays Science Centre</p>
-    <hr class="h-2 my-5" />
+    <hr class="h-2 m-5" />
   </div>
 </template>
 
@@ -79,9 +85,9 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faWhatsapp, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp, faInstagram, faLinkedin, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faPhone, faEnvelope, faWhatsapp, faInstagram, faLinkedin);
+library.add(faPhone, faEnvelope, faWhatsapp, faInstagram, faLinkedin, faYoutube);
 
 export default {
   name: "Contact",
