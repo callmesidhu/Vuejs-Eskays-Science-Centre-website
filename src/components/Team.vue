@@ -11,8 +11,9 @@
         />
         <h3 class="text-xl font-bold mt-4">Subhash Kumar Neelakantan</h3>
         <p class="text-center italic">
-          Certified Teacher with No.243172 from Georgia, SC-USA<br />
-          Designation – Eskay’s Director
+          [ Certified Teacher with No.243172 from Georgia, South Carolina - USA,<br />
+           served as Teacher Trainer, SBIP Coordinator & Administrator ]<br />
+         Current Designation – Eskay’s Director
         </p>
       </div>
 
@@ -23,7 +24,7 @@
         <div class="mb-4">
           <h4 class="font-bold">Physics</h4>
           <ul class="list-disc">
-            <li>Subhash Kumar Neelakantan [Eskay’s Director]</li>
+            <li>Subhash Kumar Neelakantan <br /> [worked in the Govt: Dept: of Edn: as a Physics Teacher in Bhutan, Maldives & USA from 2000 to 2020]</li>
           </ul>
         </div>
         <!-- Mathematics -->
