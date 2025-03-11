@@ -3,7 +3,7 @@
     <div
       id="contact"
       class="scroll-mt-20 flex flex-col lg:flex-row text-white relative bg-cover bg-center bg-no-repeat"
-      style="background-image: url('/gallery/2.jpeg');"
+      style="background-image: url('/gallery/5.jpeg');"
     >
       <!-- Background Overlay -->
       <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md z-0"></div>
@@ -15,13 +15,13 @@
         <div class="flex items-center space-x-4 mb-4">
           <a href="tel:+919497372512" target="_blank">
             <font-awesome-icon :icon="['fas', 'phone']" class="text-green-500 w-8 h-8" aria-label="Phone" />
-            <span class="text-2xl">+91 949 737 2512</span>
+            <span class="text-2xl">&nbsp;+91 949 737 2512</span>
           </a>
         </div>
         <!-- Email -->
         <div class="flex items-center space-x-4">
           <font-awesome-icon :icon="['fas', 'envelope']" class="text-red-500 w-8 h-8" aria-label="Email" />
-          <span class="text-2xl">eskayspuanlur@gmail.com</span>
+          <span class="text-2xl">eskayspunalur@gmail.com</span>
         </div>
         <!-- Social Links -->
         <div class="flex space-x-4 mt-4">
@@ -42,7 +42,7 @@
             <font-awesome-icon :icon="['fab', 'instagram']" class="text-pink-500 w-8 h-8" />
           </a>
           <a
-            href="https://www.youtube.com/channel/your-channel-id"
+            href="https://www.youtube.com/@Eskaysphysics"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
@@ -50,7 +50,7 @@
             <font-awesome-icon :icon="['fab', 'youtube']" class="text-red-600 w-8 h-8" />
           </a>
           <a
-            href="https://www.linkedin.com/company/"
+            href="https://www.linkedin.com/company/eskayssciencecentre/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -76,7 +76,8 @@
         ></iframe>
       </div>
     </div>
-    <p class="text-white text-center m-5">&copy; Eskays Science Centre</p>
+    <p class="m-5 text-center text-white"><a href="https://www.linkedin.com/company/xyphx/" target="_blank">© <span class="text-violet-700">XyphX</span>
+    </a></p> 
     <hr class="h-2 m-5" />
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <section
     id="home"
-    class="scroll-mt-20 relative text-white h-screen flex items-center justify-center overflow-hidden"
+    class=" relative text-white h-screen flex items-center justify-center overflow-hidden"
   >
     <!-- Background Image with Zoom Animation -->
     <img 
@@ -20,6 +20,9 @@
         <p class="gradual-spacing lg:text-5xl text-2xl text-red-600 font-bold playfair-display">
           An Entrance Based Training Centre at Punalur
         </p>
+     <!--     <p class="gradual-spacing lg:text-2xl text-sm text-white font-bold playfair-display">
+          Registration No:- 654321
+        </p> -->
       </div>
     </transition>
   </section>

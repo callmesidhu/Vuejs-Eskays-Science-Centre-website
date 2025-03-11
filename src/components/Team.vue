@@ -41,7 +41,7 @@
           <h4 class="font-bold">Chemistry</h4>
           <ul class="list-disc">
             <li>Sanusha Sanal</li>
-            <li>Arya Devi</li>
+            <li>Deepa Jacob</li>
             <li>Aswathi S Raj [Lab Analyst, KWA]</li>
           </ul>
         </div>
