@@ -101,7 +101,7 @@ export default {
       isMobileMenuOpen.value = false;
     };
 
-    // Initially hide the navbar after 5 seconds
+    // Initially hide the navbar after 3 seconds
     onMounted(() => {
       hideTimeout = setTimeout(() => {
         isVisible.value = false;
@@ -138,7 +138,7 @@ export default {
 /* Transition Classes for Slide Down */
 .slide-down-enter-active,
 .slide-down-leave-active {
-  transition: transform 0.5s ease;
+  transition: transform 1s ease;
 }
 .slide-down-enter-from,
 .slide-down-leave-to {
