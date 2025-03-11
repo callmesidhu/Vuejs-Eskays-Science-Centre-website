@@ -1,30 +1,29 @@
 <template>
-<section id="gallery">
-  <swiper
-    :spaceBetween="30"
-    :centeredSlides="true"
-    :autoplay="{
-      delay: 1500,
-      disableOnInteraction: false,
-    }"
-    :pagination="{
-      clickable: true,
-    }"
-    :navigation="true"
-    :modules="modules"
-    class="mySwiper"
-  >
-    <swiper-slide>
-      <img src="/gallery/1.jpg" alt="Gallery Image 1" class="w-full h-auto object-cover" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="/gallery/2.jpg" alt="Gallery Image 2" class="w-full h-auto object-cover" />
-    </swiper-slide>
-    <swiper-slide>
-      <img src="/gallery/3.jpg" alt="Gallery Image 3" class="w-full h-auto object-cover" />
-    </swiper-slide>
-  </swiper>
-</section>
+  <section id="gallery">
+    <swiper
+      :spaceBetween="30"
+      :centeredSlides="true"
+      :autoplay="{
+        delay: 1500,
+        disableOnInteraction: false,
+      }"
+      :pagination="{
+        clickable: true,
+      }"
+      :navigation="true"
+      :modules="modules"
+      class="mySwiper"
+    >
+      <!-- Dynamically generate swiper slides -->
+      <swiper-slide v-for="index in 9" :key="index">
+        <img 
+          :src="`/gallery/${index}.jpeg`" 
+          :alt="`Gallery Image ${index}`" 
+          class="w-full h-auto object-cover opacity-50" 
+        />
+      </swiper-slide>
+    </swiper>
+  </section>
 </template>
 
 <script>
@@ -51,3 +50,13 @@
     },
   };
 </script>
+
+<style scoped>
+/* Use ::v-deep to target child components in scoped styles */
+::v-deep .swiper-button-next::after,
+::v-deep .swiper-button-prev::after {
+  color: red !important; /* Change arrow color to red */
+  
+
+}
+</style>

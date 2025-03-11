@@ -23,7 +23,7 @@
         <div class="mb-4">
           <h4 class="font-bold">Physics</h4>
           <ul class="list-disc">
-            <li>Subhash Kumar Neelakantan [Certified Teacher with No.243172 from Georgia, SC-USA]</li>
+            <li>Subhash Kumar Neelakantan [Eskay’s Director]</li>
           </ul>
         </div>
         <!-- Mathematics -->

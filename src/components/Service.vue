@@ -3,7 +3,7 @@
     <div
       id="service"
       class="flex flex-col text-white relative bg-cover bg-center bg-no-repeat p-8"
-      style="background-image: url('/gallery/2.jpg');"
+      style="background-image: url('/gallery/1.jpeg');"
     >
       <!-- Background Overlay -->
       <div class="absolute inset-0 backdrop-blur-md bg-black bg-opacity-50 z-0"></div>

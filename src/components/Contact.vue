@@ -3,7 +3,7 @@
     <div
       id="contact"
       class="flex flex-col lg:flex-row text-white relative bg-cover bg-center bg-no-repeat"
-      style="background-image: url('/gallery/2.jpg');"
+      style="background-image: url('/gallery/2.jpeg');"
     >
       <!-- Background Overlay -->
       <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md z-0"></div>
