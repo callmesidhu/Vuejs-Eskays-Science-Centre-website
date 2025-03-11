@@ -1,7 +1,7 @@
 <template>
   <section
     id="home"
-    class="relative text-white h-screen flex items-center justify-center overflow-hidden"
+    class="scroll-mt-20 relative text-white h-screen flex items-center justify-center overflow-hidden"
   >
     <!-- Background Image with Zoom Animation -->
     <img 

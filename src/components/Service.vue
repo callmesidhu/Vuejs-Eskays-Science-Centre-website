@@ -2,7 +2,7 @@
   <div>
     <div
       id="service"
-      class="flex flex-col text-white relative bg-cover bg-center bg-no-repeat p-8"
+      class="scroll-mt-20 flex flex-col text-white relative bg-cover bg-center bg-no-repeat p-8"
       style="background-image: url('/gallery/1.jpeg');"
     >
       <!-- Background Overlay -->

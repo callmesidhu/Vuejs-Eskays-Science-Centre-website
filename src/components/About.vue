@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class=" p-8">
+  <section id="about" class="scroll-mt-20 p-8" >
     <h2 class="text-4xl font-bold text-center text-red-600 ">About Us</h2>
     <div class="mt-4 text-center text-white">
       <p class="mb-4">

@@ -1,5 +1,5 @@
 <template>
-  <section id="faculty" class="text-white  p-8">
+  <section id="faculty" class="scroll-mt-20 text-white  p-8">
     <h2 class="text-4xl font-bold text-center text-red-600 "><b>Our Faculty</b></h2>
     <div class="flex flex-col lg:flex-row mt-8">
       <!-- Left Side: Director's Image and Qualification -->

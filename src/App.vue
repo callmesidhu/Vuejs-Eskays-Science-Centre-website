@@ -1,8 +1,8 @@
 <template>
   <Navbar />
-  <section>
+  <section >
     <Home />
-    <About  />
+    <About />
     <Gallery />
     <Team />
     <service />

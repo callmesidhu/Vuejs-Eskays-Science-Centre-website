@@ -2,7 +2,7 @@
   <div>
     <div
       id="contact"
-      class="flex flex-col lg:flex-row text-white relative bg-cover bg-center bg-no-repeat"
+      class="scroll-mt-20 flex flex-col lg:flex-row text-white relative bg-cover bg-center bg-no-repeat"
       style="background-image: url('/gallery/2.jpeg');"
     >
       <!-- Background Overlay -->

@@ -1,17 +1,17 @@
 <template>
-  <nav
-    class="text-white p-3 px-4 fixed top-0 left-0 w-full bg-black z-50"
-    v-bind:class="{ 'hidden': !isVisible }"
-  >
-    <div class="flex justify-between items-center max-w-7xl mx-auto">
-      <!-- Logo Section -->
-      <div class="text-2xl font-bold">
-        <img
-          src="/favicon.ico"
-          alt="Logo"
-          class="h-16 w-16"
-        />
-      </div>
+  <transition name="slide-down">
+    <nav
+      class="text-white p-3 px-4 fixed top-0 left-0 w-full bg-black z-50"
+    >
+      <div class="flex justify-between items-center max-w-7xl mx-auto">
+        <!-- Logo Section -->
+        <div class="text-2xl font-bold">
+          <img
+            src="/favicon.ico"
+            alt="Logo"
+            class="h-16 w-16"
+          />
+        </div>
 
         <!-- Navigation Links -->
         <ul class="hidden md:flex space-x-8">
@@ -83,13 +83,14 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 export default {
   name: 'Navbar',
   setup() {
     const isMobileMenuOpen = ref(false);
     const isVisible = ref(true);
+    let hideTimeout;
 
     const toggleMenu = () => {
       isMobileMenuOpen.value = !isMobileMenuOpen.value;
@@ -99,41 +100,26 @@ export default {
       isMobileMenuOpen.value = false;
     };
 
-    // Hide navbar after 1 second
+   
     onMounted(() => {
-      setTimeout(() => {
-        if (!isMobileMenuOpen.value) {
-          isVisible.value = true;
-        }
-      }, 1000);
+      hideTimeout = setTimeout(() => {
+        isVisible.value = false;
+      }, 5000);
+
+     
+      window.addEventListener('mousemove', showNavbar);
     });
 
-    // Show navbar when mouse moves or scrolling, but not if menu is open
     const showNavbar = () => {
-      if (!isMobileMenuOpen.value) {
-        isVisible.value = true;
-        // Reset timer to hide navbar again after 1 second of inactivity
-        clearTimeout(hideTimeout);
-        hideTimeout = setTimeout(() => {
-          if (!isMobileMenuOpen.value) {
-            isVisible.value = true;
-          }
-        }, 1000);
-      }
+      isVisible.value = true;
+      clearTimeout(hideTimeout);
+      hideTimeout = setTimeout(() => {
+        isVisible.value = false;
+      }, 5000);
     };
 
-    let hideTimeout;
-
-    // Add event listener for mousemove and scroll
-    onMounted(() => {
-      window.addEventListener('mousemove', showNavbar);
-      window.addEventListener('scroll', showNavbar); // Listen to scroll
-    });
-
-    // Clean up event listener
     onBeforeUnmount(() => {
       window.removeEventListener('mousemove', showNavbar);
-      window.removeEventListener('scroll', showNavbar); // Clean up scroll listener
       clearTimeout(hideTimeout);
     });
 
@@ -141,13 +127,14 @@ export default {
       isMobileMenuOpen,
       toggleMenu,
       closeMenu,
+      isVisible,
     };
   },
 };
 </script>
 
 <style scoped>
-/* Transition Classes for Slide Down */
+
 .slide-down-enter-active,
 .slide-down-leave-active {
   transition: transform 1s ease;
