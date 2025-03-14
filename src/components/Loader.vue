@@ -1,6 +1,6 @@
 <template>
         <div class="loader-container">
-          <img src="@/assets/Eskayslog.png" alt="Loading..." class="loader-logo" />
+          <img src="/favicon.ico" alt="Loading..." class="loader-logo" />
           <div class="loader-bar-container">
             <div class="loader-bar" :style="{ width: percentage + '%' }"></div>
           </div>
