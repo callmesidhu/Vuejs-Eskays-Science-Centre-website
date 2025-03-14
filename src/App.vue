@@ -1,14 +1,19 @@
 <template>
-  <Navbar />
-  <section >
-    <Home />
-    <About />
-    <Gallery />
-    <Team />
-    <service />
-    <Events />
-    <Contact />
-  </section>
+  <div>
+    <Loader v-if="isLoading" />
+    <div v-else>
+      <Navbar />
+      <section>
+        <Home />
+        <About />
+        <Gallery />
+        <Team />
+        <Service />
+        <Events />
+        <Contact />
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -19,9 +24,9 @@ import Service from './components/Service.vue'
 import Gallery from './components/Gallery.vue'
 import Team from './components/Team.vue'
 import Contact from './components/Contact.vue'
-import './assets/styles/tailwind.css';
 import Events from './components/Events.vue'
-
+import Loader from './components/Loader.vue'
+import './assets/styles/tailwind.css';
 
 export default {
   name: 'App',
@@ -33,7 +38,18 @@ export default {
     Gallery,
     Team,
     Contact,
-    Events
+    Events,
+    Loader
+  },
+  data() {
+    return {
+      isLoading: true
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 3000); // Simulated loading time
   }
 }
 </script>
