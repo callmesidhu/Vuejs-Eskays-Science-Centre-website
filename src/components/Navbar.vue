@@ -20,7 +20,7 @@
           <li><a href="#gallery" class="text-2xl hover:text-red-500 arvo-regular">Gallery</a></li>
           <li><a href="#faculty" class="text-2xl hover:text-red-500 arvo-regular">Faculties</a></li>
           <li><a href="#service" class="text-2xl hover:text-red-500 arvo-regular">Facilities</a></li>
-          <li><a href="#events" class="text-2xl hover:text-red-500 arvo-regular">Events</a></li>
+          <li><a href="#courses" class="text-2xl hover:text-red-500 arvo-regular">Courses</a></li>
           <li><a href="#contact" class="text-2xl hover:text-red-500 arvo-regular">Contact</a></li>
         </ul>
 
@@ -75,7 +75,7 @@
         <li><a href="#gallery" class="text-2xl text-white hover:text-red-500 arvo-regular" @click="closeMenu">Gallery</a></li>
         <li><a href="#faculty" class="text-2xl text-white hover:text-red-500 arvo-regular" @click="closeMenu">Faculties</a></li>
         <li><a href="#service" class="text-2xl text-white hover:text-red-500 arvo-regular" @click="closeMenu">Facilities</a></li>
-        <li><a href="#events" class="text-2xl text-white hover:text-red-500 arvo-regular" @click="closeMenu">Events</a></li>
+        <li><a href="#courses" class="text-2xl text-white hover:text-red-500 arvo-regular" @click="closeMenu">Courses</a></li>
         <li><a href="#contact" class="text-2xl text-white hover:text-red-500 arvo-regular" @click="closeMenu">Contact</a></li>
       </ul>
     </nav>

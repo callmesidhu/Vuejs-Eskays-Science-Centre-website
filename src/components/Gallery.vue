@@ -19,7 +19,7 @@
         <img 
           :src="`/gallery/${index}.jpeg`" 
           :alt="`Gallery Image ${index}`" 
-          class="w-full h-auto object-cover opacity-50" 
+          class="w-full h-auto object-cover" 
         />
       </swiper-slide>
     </swiper>

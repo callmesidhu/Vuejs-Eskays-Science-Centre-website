@@ -1,7 +1,7 @@
 <template>
-  <section id="about" class="scroll-mt-20 p-8" >
+  <section id="about" class="scroll-mt-20 p-8 " >
     <h2 class="text-4xl font-bold text-center text-red-600 ">About Us</h2>
-    <div class="mt-4 text-center text-white">
+    <div class="mt-4 lg:mx-40 mx-8 text-white">
       <p class="mb-4">
         Eskay’s Science Centre is an Entrance (JEE, KEAM, NEET) Based Training Centre, located in 
         Punalur (Municipality), Kollam (District), Kerala (State), established in the year 2021, serving 
@@ -53,8 +53,11 @@
 </template>
 
 <script>
+
+
+
 export default {
-  name: 'About'
+  name: 'About',
 };
 </script>
 
