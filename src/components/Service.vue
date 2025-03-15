@@ -31,16 +31,28 @@
         </section>
 
         <!-- Classroom Rules Section -->
-        <section class="">
-          <h2 class="text-4xl text-center font-bold mb-4 text-red-600">Classroom Rules</h2>
-          <ul class="list-decimal list-inside text-lg max-w-4xl mx-auto lg:mx-96 space-y-2">
-            <li>Be prepared (includes having all materials for class).</li>
-            <li>Be respectful—to teachers, yourself, and others.</li>
-            <li>Be on time and in your seat working.</li>
-            <li>Control your body, voice, and concentration.</li>
-            <li>No food or drinks in the classroom.</li>
-          </ul>
-        </section>
+        <div class="flex flex-col lg:flex-row lg:justify-center lg:space-x-16 space-y-8 lg:space-y-0 lg:mx-20" >
+  <section class="lg:w-1/2 lg:mx-44">
+    <h2 class="text-4xl  font-bold mb-4 text-red-600">Classroom Rules</h2>
+    <ul class="list-decimal list-inside text-lg max-w-4xl mx-auto space-y-2">
+      <li>Be prepared (includes having all materials for class).</li>
+      <li>Be respectful—to teachers, yourself, and others.</li>
+      <li>Be on time and in your seat working.</li>
+      <li>Control your body, voice, and concentration.</li>
+      <li>No food or drinks in the classroom.</li>
+    </ul>
+  </section>
+  <section class="lg:w-1/2 lg:mx-44">
+    <h2 class="text-4xl font-bold mb-4 text-red-600">Upcoming Projects</h2>
+    <ul class="list-decimal list-inside text-lg max-w-4xl mx-auto space-y-2">
+      <li>Eskay’s Learning App</li>
+      <li>Eskay’s mini guide </li>
+      <li>Eskay’s Writing Book</li>
+      <li>Eskay’s YouTube channel</li>
+    </ul>
+  </section>
+</div>
+
       </div>
     </div>
   </div>
