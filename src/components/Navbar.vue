@@ -15,13 +15,13 @@
 
         <!-- Navigation Links -->
         <ul class="hidden md:flex space-x-8">
-          <li><a href="#home" class="text-2xl hover:text-red-500 arvo-regular">Home</a></li>
           <li><a href="#about" class="text-2xl hover:text-red-500 arvo-regular">About</a></li>
           <li><a href="#gallery" class="text-2xl hover:text-red-500 arvo-regular">Gallery</a></li>
           <li><a href="#faculty" class="text-2xl hover:text-red-500 arvo-regular">Faculties</a></li>
           <li><a href="#service" class="text-2xl hover:text-red-500 arvo-regular">Facilities</a></li>
           <li><a href="#courses" class="text-2xl hover:text-red-500 arvo-regular">Courses</a></li>
           <li><a href="#contact" class="text-2xl hover:text-red-500 arvo-regular">Contact</a></li>
+          <li class="bg-white rounded-2xl px-4"><a href="/results" class="text-2xl hover:text-red-500 font-bold text-black arvo-regular">Results</a></li>
         </ul>
 
         <!-- Mobile Menu Button -->
@@ -77,6 +77,8 @@
         <li><a href="#service" class="text-2xl text-white hover:text-red-500 arvo-regular" @click="closeMenu">Facilities</a></li>
         <li><a href="#courses" class="text-2xl text-white hover:text-red-500 arvo-regular" @click="closeMenu">Courses</a></li>
         <li><a href="#contact" class="text-2xl text-white hover:text-red-500 arvo-regular" @click="closeMenu">Contact</a></li>
+        <li class="bg-white rounded-2xl px-4"><a href="/results" class="text-2xl hover:text-red-500 font-bold text-black hover:scale-105">Results</a></li>
+
       </ul>
     </nav>
   </transition>
