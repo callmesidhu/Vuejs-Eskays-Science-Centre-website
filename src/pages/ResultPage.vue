@@ -87,7 +87,16 @@
         setup() {
           const regNum = ref("");
           const phone = ref("");
-          const student = ref<any>(null);
+          const student = ref<{ 
+                name: string;
+                school_name: string;
+                rank: string;
+                percentile: string;
+                benefits: string;
+                marks: string;
+                remarks: string;
+                } | null>(null);
+
           const errorMessage = ref("");
           const loading = ref(false);
       
@@ -114,9 +123,8 @@
       
               // Mapping based on Google Sheets header:
               // 0: reg_num, 1: name, 2: phone, 3: school_name, 4: rank, 5: percentile, 6: benefits, 7: marks, 8: remarks
-              const result = rows.find(
-                (row: any) => row[0] === regNum.value && row[2] === phone.value
-              );
+              const result = rows.find((row: string[]) => row[0] === regNum.value && row[2] === phone.value);
+
       
               // Simulate a 2-second loading delay
               setTimeout(() => {
