@@ -1,31 +1,39 @@
 <template>
         <div class="container flex-1 w-full ">
-          <div class="justify-center flex lg:flex-row flex-col items-center mb-8">
-            <img
-              src="/favicon.ico"
-              alt="Logo"
-              class="h-16 w-16"
-            />
-            <h1 class="title">Eskaysio Talent Search Exam Results</h1>
-          </div>
-      
+          <a href="/">
+            <div class="justify-center flex lg:flex-row flex-col items-center mb-8">
+              <img src="/favicon.ico" alt="Logo" class="h-16 w-16" />
+              <h1 class="title font-bold">Eskaysio Talent Search Exam Results</h1>
+            </div>
+          </a>
           <!-- Input Fields -->
-          <div class="input-container lg:mx-80 mx-auto">
-            <input 
-              v-model="regNum" 
-              placeholder="Enter Registration Number" 
+          <div class="input-container lg:mx-80 mx-auto gap-1">
+                <p class="opacity-20">Register Number:</p>
+            <input
+              v-model="regNum"
+              placeholder="Enter your Register Number"
               class="input-field"
             />
-            <input 
-              v-model="phone" 
-              placeholder="Enter Phone Number" 
+                <p class="opacity-20">Phone Number:</p>
+            <input
+              v-model="phone"
+              placeholder="Enter your Phone Number"
               class="input-field"
             />
             <button @click="fetchResults" class="search-btn">Search</button>
           </div>
       
+          <!-- Skeleton Loader -->
+          <div v-if="loading" class="skeleton-card lg:mx-80 mx-auto mt-8">
+            <div class="skeleton-line skeleton-title"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+          </div>
+      
           <!-- Display Results -->
-          <div v-if="student" class="result-card lg:mx-80 mx-auto mt-8">
+          <div v-if="!loading && student" class="result-card lg:mx-80 mx-auto mt-8">
             <h2 class="student-name">{{ student.name }}</h2>
             <div class="result-details">
               <div class="detail-item">
@@ -64,12 +72,14 @@
             </div>
           </div>
       
-          <p v-else-if="errorMessage" class="error-message">{{ errorMessage }}</p>
+          <p v-else-if="!loading && errorMessage" class="error-message">
+            {{ errorMessage }}
+          </p>
         </div>
       </template>
       
       <script lang="ts">
-      import { defineComponent, ref } from "vue";
+      import { defineComponent, ref, nextTick } from "vue";
       import axios from "axios";
       
       export default defineComponent({
@@ -79,50 +89,68 @@
           const phone = ref("");
           const student = ref<any>(null);
           const errorMessage = ref("");
+          const loading = ref(false);
       
           const fetchResults = async () => {
             if (!regNum.value || !phone.value) {
-              errorMessage.value = "Please enter both Registration Number and Phone Number.";
+              errorMessage.value =
+                "Please enter both Registration Number and Phone Number.";
               return;
             }
+      
+            // Reset and show loader
+            loading.value = true;
+            student.value = null;
+            errorMessage.value = "";
       
             const API_KEY = import.meta.env.VITE_GOOGLE_SHEETS_API_KEY;
             const SHEET_ID = import.meta.env.VITE_GOOGLE_SHEET_ID;
             const RANGE = "Sheet1!A2:I";
-      
             const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${RANGE}?key=${API_KEY}`;
       
             try {
               const response = await axios.get(url);
               const rows = response.data.values;
       
-              // Ensure proper column mapping based on your Google Sheets header:
+              // Mapping based on Google Sheets header:
               // 0: reg_num, 1: name, 2: phone, 3: school_name, 4: rank, 5: percentile, 6: benefits, 7: marks, 8: remarks
-              const result = rows.find(row => row[0] === regNum.value && row[2] === phone.value);
+              const result = rows.find(
+                (row: any) => row[0] === regNum.value && row[2] === phone.value
+              );
       
-              if (result) {
-                student.value = {
-                  name: result[1],
-                  phone: result[2],
-                  school_name: result[3],
-                  rank: result[4],
-                  percentile: result[5],
-                  benefits: result[6],
-                  marks: result[7],
-                  remarks: result[8],
-                };
-                errorMessage.value = "";
-              } else {
-                student.value = null;
-                errorMessage.value = "No results found for the provided details.";
-              }
+              // Simulate a 2-second loading delay
+              setTimeout(() => {
+                if (result) {
+                  student.value = {
+                    name: result[1],
+                    phone: result[2],
+                    school_name: result[3],
+                    rank: result[4],
+                    percentile: result[5],
+                    benefits: result[6],
+                    marks: result[7],
+                    remarks: result[8],
+                  };
+                } else {
+                  errorMessage.value =
+                    "No results found for the provided details.";
+                }
+                loading.value = false;
+                nextTick(() => {
+                  window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: "smooth",
+                  });
+                });
+              }, 2000);
             } catch (error) {
               console.error("Error fetching data:", error);
               errorMessage.value = "Failed to fetch data. Try again later.";
+              loading.value = false;
             }
           };
       
-          return { regNum, phone, student, errorMessage, fetchResults };
+          return { regNum, phone, student, errorMessage, fetchResults, loading };
         }
       });
       </script>
@@ -186,11 +214,13 @@
         background-color: #ff1a1a;
       }
       
-      .result-card {
+      .result-card,
+      .skeleton-card {
         background-color: #1e1e1e;
         border-radius: 8px;
         padding: 2rem;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        margin-top: 1rem;
       }
       
       .student-name {
@@ -229,6 +259,30 @@
         padding: 1rem;
         background-color: #1e1e1e;
         border-radius: 4px;
+      }
+      
+      /* Skeleton styles */
+      .skeleton-line {
+        height: 20px;
+        background-color: #333;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+        animation: shimmer 1.5s infinite;
+      }
+      
+      .skeleton-title {
+        width: 60%;
+        height: 30px;
+        margin-bottom: 1.5rem;
+      }
+      
+      @keyframes shimmer {
+        0% {
+          background-position: -200px 0;
+        }
+        100% {
+          background-position: 200px 0;
+        }
       }
       
       @media (min-width: 768px) {
