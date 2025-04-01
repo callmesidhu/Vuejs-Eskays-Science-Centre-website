@@ -7,17 +7,15 @@
             </div>
           </a>
           <!-- Input Fields -->
-          <div class="input-container lg:mx-80 mx-auto gap-1">
-                <p class="opacity-20">Register Number:</p>
+          <div class="input-container lg:mx-80 mx-auto">
             <input
               v-model="regNum"
-              placeholder="Enter your Register Number"
+              placeholder="Enter Registration Number"
               class="input-field"
             />
-                <p class="opacity-20">Phone Number:</p>
             <input
               v-model="phone"
-              placeholder="Enter your Phone Number"
+              placeholder="Enter Phone Number"
               class="input-field"
             />
             <button @click="fetchResults" class="search-btn">Search</button>
@@ -82,21 +80,24 @@
       import { defineComponent, ref, nextTick } from "vue";
       import axios from "axios";
       
+      // Define the Student interface to include the phone property
+      interface Student {
+        name: string;
+        phone: string;
+        school_name: string;
+        rank?: string;
+        percentile?: string;
+        benefits?: string;
+        marks?: string;
+        remarks?: string;
+      }
+      
       export default defineComponent({
         name: "ResultPage",
         setup() {
           const regNum = ref("");
           const phone = ref("");
-          const student = ref<{ 
-                name: string;
-                school_name: string;
-                rank: string;
-                percentile: string;
-                benefits: string;
-                marks: string;
-                remarks: string;
-                } | null>(null);
-
+          const student = ref<Student | null>(null);
           const errorMessage = ref("");
           const loading = ref(false);
       
@@ -123,8 +124,9 @@
       
               // Mapping based on Google Sheets header:
               // 0: reg_num, 1: name, 2: phone, 3: school_name, 4: rank, 5: percentile, 6: benefits, 7: marks, 8: remarks
-              const result = rows.find((row: string[]) => row[0] === regNum.value && row[2] === phone.value);
-
+              const result = rows.find(
+                (row: any) => row[0] === regNum.value && row[2] === phone.value
+              );
       
               // Simulate a 2-second loading delay
               setTimeout(() => {
