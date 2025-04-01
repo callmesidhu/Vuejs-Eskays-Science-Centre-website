@@ -1,14 +1,14 @@
 <template>
         <div class="container flex-1 w-full ">
-            <div class="justify-center flex lg:flex-row flex-col items-center mb-8">
-                <img
-            src="/favicon.ico"
-            alt="Logo"
-            class="h-16 w-16"
-          />
-          <h1 class="title">Eskaysio Talent Search Exam Results</h1>
-            </div>
-          
+          <div class="justify-center flex lg:flex-row flex-col items-center mb-8">
+            <img
+              src="/favicon.ico"
+              alt="Logo"
+              class="h-16 w-16"
+            />
+            <h1 class="title">Eskaysio Talent Search Exam Results</h1>
+          </div>
+      
           <!-- Input Fields -->
           <div class="input-container lg:mx-80 mx-auto">
             <input 
@@ -23,38 +23,47 @@
             />
             <button @click="fetchResults" class="search-btn">Search</button>
           </div>
-          
+      
           <!-- Display Results -->
-          <div v-if="student" class="result-card">
+          <div v-if="student" class="result-card lg:mx-80 mx-auto mt-8">
             <h2 class="student-name">{{ student.name }}</h2>
             <div class="result-details">
+              <div class="detail-item">
+                <span class="detail-label">Phone:</span>
+                <span class="detail-value">{{ student.phone }}</span>
+              </div>
               <div class="detail-item">
                 <span class="detail-label">School:</span>
                 <span class="detail-value">{{ student.school_name }}</span>
               </div>
-              <div class="detail-item">
+              <!-- Conditionally render Rank -->
+              <div class="detail-item" v-if="student.rank">
                 <span class="detail-label">Rank:</span>
                 <span class="detail-value">{{ student.rank }}</span>
               </div>
-              <div class="detail-item">
+              <!-- Conditionally render Percentile -->
+              <div class="detail-item" v-if="student.percentile">
                 <span class="detail-label">Percentile:</span>
-                <span class="detail-value">{{ student.percentile }}%</span>
+                <span class="detail-value">{{ student.percentile }}</span>
               </div>
-              <div class="detail-item">
-                <span class="detail-label">Benefits:</span>
-                <span class="detail-value">{{ student.benefits }}</span>
-              </div>
-              <div class="detail-item">
+              <!-- Conditionally render Marks -->
+              <div class="detail-item" v-if="student.marks">
                 <span class="detail-label">Marks:</span>
                 <span class="detail-value">{{ student.marks }}</span>
               </div>
-              <div class="detail-item">
+              <!-- Conditionally render Benefits -->
+              <div class="detail-item" v-if="student.benefits">
+                <span class="detail-label">Benefits:</span>
+                <span class="detail-value">{{ student.benefits }}</span>
+              </div>
+              <!-- Conditionally render Remarks -->
+              <div class="detail-item" v-if="student.remarks">
                 <span class="detail-label">Remarks:</span>
                 <span class="detail-value">{{ student.remarks }}</span>
               </div>
             </div>
           </div>
-          
+      
           <p v-else-if="errorMessage" class="error-message">{{ errorMessage }}</p>
         </div>
       </template>
@@ -87,11 +96,14 @@
               const response = await axios.get(url);
               const rows = response.data.values;
       
-              const result = rows.find(row => row[0] === regNum.value && row[1] === phone.value);
+              // Ensure proper column mapping based on your Google Sheets header:
+              // 0: reg_num, 1: name, 2: phone, 3: school_name, 4: rank, 5: percentile, 6: benefits, 7: marks, 8: remarks
+              const result = rows.find(row => row[0] === regNum.value && row[2] === phone.value);
       
               if (result) {
                 student.value = {
-                  name: result[2],
+                  name: result[1],
+                  phone: result[2],
                   school_name: result[3],
                   rank: result[4],
                   percentile: result[5],
@@ -138,7 +150,6 @@
         padding: 2rem;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        
       }
       
       .input-field {
@@ -180,12 +191,10 @@
         border-radius: 8px;
         padding: 2rem;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        margin-top: 1rem;
       }
       
       .student-name {
         color: #ff3333;
-        text-align: center;
         margin-bottom: 1.5rem;
         font-size: 1.8rem;
       }
@@ -223,12 +232,9 @@
       }
       
       @media (min-width: 768px) {
-        .result-details {
-          grid-template-columns: 1fr 1fr;
-        }
-        
         .input-container {
           padding: 2rem 3rem;
         }
       }
       </style>
+      
