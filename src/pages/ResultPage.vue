@@ -55,7 +55,7 @@
               <!-- Conditionally render Marks -->
               <div class="detail-item" v-if="student.marks">
                 <span class="detail-label">Marks:</span>
-                <span class="detail-value">{{ student.marks }}</span>
+                <span class="detail-value">{{ student.marks }}/100</span>
               </div>
               <!-- Conditionally render Benefits -->
               <div class="detail-item" v-if="student.benefits">
