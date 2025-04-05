@@ -36,7 +36,7 @@
       
               <section class="mt-5">
                 <h2 class="text-xl font-semibold">⁍ Lab Facilities</h2>
-                <p class="mx-4">Available for: Physics / Chemistry / Biology</p>
+                <p class="mx-4">Available for: Physics / Chemistry / Biology / Maths</p>
               </section>
             </div>
       
