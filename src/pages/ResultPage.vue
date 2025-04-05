@@ -10,7 +10,7 @@
           <div class="input-container lg:mx-80 mx-auto">
             <input
               v-model="regNum"
-              placeholder="Enter Registration Number"
+              placeholder="Enter Registration Number (Eg:E00XXX)"
               class="input-field"
             />
             <input
@@ -55,7 +55,7 @@
               <!-- Conditionally render Marks -->
               <div class="detail-item" v-if="student.marks">
                 <span class="detail-label">Marks:</span>
-                <span class="detail-value">{{ student.marks }}/100</span>
+                <span class="detail-value">{{ student.marks }}</span>
               </div>
               <!-- Conditionally render Benefits -->
               <div class="detail-item" v-if="student.benefits">
