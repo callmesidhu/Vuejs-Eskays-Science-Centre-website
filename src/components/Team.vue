@@ -73,7 +73,7 @@
         <li>Shahina Shajahan [Exam Coordinator]</li>
         <li>Sidharth Sadhu [Program Coordinator]</li>
         <li>Sindhulal S [Office Staff]</li>
-        <li>Safwan Rawthar [PRO]</li>
+        <li>Safwan Haneefa [PRO]</li>
       </ul>
     </div>
   </section>
