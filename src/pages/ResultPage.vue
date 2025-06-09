@@ -3,7 +3,7 @@
           <a href="/">
             <div class="justify-center flex lg:flex-row flex-col items-center mb-8">
               <img src="/favicon.ico" alt="Logo" class="h-16 w-16" />
-              <h1 class="title font-bold">Eskaysio Talent Search Exam Results</h1>
+              <h1 class="title font-bold">Eskay's Formative Assessments Steet</h1>
             </div>
           </a>
           <!-- Input Fields -->
