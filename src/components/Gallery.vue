@@ -15,7 +15,7 @@
       class="mySwiper"
     >
       <!-- Dynamically generate swiper slides -->
-      <swiper-slide v-for="index in 15" :key="index">
+      <swiper-slide v-for="index in 17" :key="index">
         <img 
           :src="`/gallery/${index}.jpeg`" 
           :alt="`Gallery Image ${index}`" 
